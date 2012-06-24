@@ -1,0 +1,22 @@
+
+
+
+<% @microposts.each do |micropost| %>
+
+<div class="well">
+    <ul class="nav pull-right"> 
+    <%= micropost.created_at.strftime("%B %d,%Y at %I:%M %p" ) %>  
+    <i class="icon-chevron-down"></i>
+    <%= link_to 'Edit', edit_micropost_path(micropost) %>
+    <%= link_to 'Destroy', micropost, :confirm => 'Are you sure?', :method => :delete %></ul>
+    <p><%= User.find(micropost.user_id).username %></p>
+
+    <h3> <%= micropost.content %></h3>
+
+</div>
+
+<% end %>
+
+<div class=container >
+<%= will_paginate @microposts %>
+</div>
