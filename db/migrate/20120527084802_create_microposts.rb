@@ -1,6 +1,5 @@
 class CreateMicroposts < ActiveRecord::Migration
   
-add_column :users, :time_zone, :string
 
    def self.up
     create_table :microposts do |t|
