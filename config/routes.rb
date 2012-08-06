@@ -1,9 +1,11 @@
 ArocMblog::Application.routes.draw do
+
+  devise_for :users
+
   get "home/about"
 
   get "home/contact"
 
-  devise_for :users
 
   get "home/index"
   match '/about' => "home#about"

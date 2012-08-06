@@ -46,4 +46,5 @@ ArocMblog::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+   config.action_mailer.default_url_options = { :host => 'http://stark-fire-8667.herokuapp.com/' }
 end
